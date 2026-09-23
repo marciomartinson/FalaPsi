@@ -1,0 +1,6 @@
+{
+  "name": "Fala Saúde - Protótipo Clínico",
+  "description": "Sistema clínico inteligente para plantão médico de emergência com transcrição acústica em tempo real, detecção de condutas, salvaguardas CFM e auditoria forense.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
