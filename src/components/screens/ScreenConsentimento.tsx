@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { PsychiatricPatient, ScreenId } from '../../types/clinical';
-import { SyntheticNoticeBanner } from '../SyntheticNoticeBanner';
 
 interface ScreenConsentimentoProps {
   currentPatient: PsychiatricPatient;
@@ -27,10 +26,7 @@ export const ScreenConsentimento: React.FC<ScreenConsentimentoProps> = ({
     .toUpperCase();
 
   return (
-    <main className="w-full pt-20 pb-28 bg-[#f8f9ff] min-h-screen">
-      {/* Synthetic notice fixed banner */}
-      <SyntheticNoticeBanner />
-
+    <main className="w-full pt-28 pb-28 bg-[#f8f9ff] min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 flex flex-col gap-6">
         {/* Header indicator */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#e5eeff]">

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ScreenId, DoctorUser, MOCK_DOCTORS, AppNotification } from '../types/clinical';
+import { SyntheticNoticeBanner } from './SyntheticNoticeBanner';
 
 interface HeaderProps {
   currentScreen: ScreenId;
@@ -72,23 +73,8 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
-      {/* Top hospital regulatory banner */}
-      <div className="w-full bg-[#ffffff] border-b border-[#e5eeff] px-4 lg:px-6 py-1 flex items-center justify-between text-[11px] backdrop-blur-sm text-[#45464d] shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
-        <div className="flex items-center gap-2 mx-auto sm:mx-0">
-          <span className="w-2 h-2 rounded-full bg-[#0284c7] animate-pulse"></span>
-          <span className="font-mono font-medium text-[#0284c7]">PSIQUIATRIA AMBULATORIAL</span>
-          <span className="text-[#c6c6cd]">•</span>
-          <span className="hidden sm:inline font-mono text-[#45464d]">CFM 2.314/2022 • IA Passiva com Fontes Auditáveis</span>
-          <span className="hidden md:inline text-[#c6c6cd]">•</span>
-          <span className="hidden md:inline text-[#45464d]">Sem Diagnóstico Automático</span>
-        </div>
-
-        <div className="hidden sm:flex items-center gap-3">
-          <span className="font-mono text-[11px] text-[#76777d]">{currentUser.boxLocation}</span>
-          <span className="text-[#c6c6cd]">|</span>
-          <span className="font-semibold text-[#0b1c30]">{currentUser.name} ({currentUser.crm})</span>
-        </div>
-      </div>
+      {/* Barra amarela de aviso PoC substituindo a antiga barra superior */}
+      <SyntheticNoticeBanner />
 
       {/* Main Header */}
       <header className="w-full bg-[#ffffff]/95 backdrop-blur-md border-b border-[#e5eeff] px-4 lg:px-6 shadow-sm">

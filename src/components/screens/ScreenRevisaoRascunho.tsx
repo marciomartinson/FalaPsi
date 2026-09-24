@@ -19,7 +19,6 @@ import {
   TRANSCRIPT_ROBERTO,
   TRANSCRIPT_LUCIA,
 } from '../../data/mockClinicalData';
-import { SyntheticNoticeBanner } from '../SyntheticNoticeBanner';
 import { RiskAlertBanner } from '../RiskAlertBanner';
 
 interface ScreenRevisaoRascunhoProps {
@@ -464,10 +463,7 @@ export const ScreenRevisaoRascunho: React.FC<ScreenRevisaoRascunhoProps> = ({
   };
 
   return (
-    <main className="w-full pt-20 pb-32 bg-[#f8f9ff] min-h-screen">
-      {/* Synthetic Notice Fixed Banner */}
-      <SyntheticNoticeBanner />
-
+    <main className="w-full pt-28 pb-32 bg-[#f8f9ff] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col gap-5">
         {/* Risk Alert Component (Mandatory if Case 3 or risk detected) */}
         {riskData.hasRisk && (

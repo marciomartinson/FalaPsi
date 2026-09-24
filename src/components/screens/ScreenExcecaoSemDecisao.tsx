@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { PsychiatricPatient, ScreenId } from '../../types/clinical';
-import { SyntheticNoticeBanner } from '../SyntheticNoticeBanner';
 
 interface ScreenExcecaoSemDecisaoProps {
   currentPatient: PsychiatricPatient;
@@ -26,10 +25,7 @@ export const ScreenExcecaoSemDecisao: React.FC<ScreenExcecaoSemDecisaoProps> = (
   const [isSavedManual, setIsSavedManual] = useState(false);
 
   return (
-    <main className="w-full pt-20 pb-28 bg-[#f8f9ff] min-h-screen">
-      {/* Synthetic Notice Fixed Banner */}
-      <SyntheticNoticeBanner />
-
+    <main className="w-full pt-28 pb-28 bg-[#f8f9ff] min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col gap-6">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#e5eeff]">
