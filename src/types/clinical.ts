@@ -71,6 +71,9 @@ export interface TranscriptUtterance {
   text: string;
   evidenceId?: string;
   confidence?: string;
+  badge?: string;
+  isQuestion?: boolean;
+  questionType?: 'doctor_probe' | 'patient_inquiry';
   isUncertain?: boolean; // Trecho incerto sublinhado em cinza
   isRiskMention?: boolean; // Menção a risco literal
 }
@@ -87,7 +90,7 @@ export interface ClinicalAttentionPoint {
 
 export interface ClinicalDecision {
   id: string;
-  type: 'exame' | 'encaminhamento';
+  type: 'exame' | 'encaminhamento' | 'medicamento';
   title: string;
   description: string;
   doctorUtteranceSource: string;
